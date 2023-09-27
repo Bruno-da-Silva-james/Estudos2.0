@@ -5,13 +5,19 @@ function shell() {
     let k = n/2
     let copia
     
+    console.log(k);
     for (let i = 0; i < n; i++) {
         copia = vetor[i]
-
-        if (vetor[k] > copia) {
-            vetor[i] = vetor[k]
-            vetor[k] = vetor[i]
+        
+        while (vetor[k] > vetor[i]) {
+            
         }
+
+        //if (vetor[k] > copia) {
+          //  vetor[i] = vetor[k]
+            //console.log(vetor);
+        //}
+        
         console.log(vetor);
     }
 }

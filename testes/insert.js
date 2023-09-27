@@ -13,6 +13,7 @@ function ins() {
         }
         vetor[indice] = copia
         console.log(vetor);
+        
     }
     
 }
