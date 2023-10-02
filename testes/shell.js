@@ -1,24 +1,19 @@
-
 function shell() {
-    let vetor = [2,3,5,1,6,7,10,32]
-    let n = vetor.length
-    let k = n/2
-    let copia
-    
-    console.log(k);
-    for (let i = 0; i < n; i++) {
-        copia = vetor[i]
-        
-        while (vetor[k] > vetor[i]) {
-            
+    let array = [10,20,42,12,31,52,33]
+    let gap = array.length / 2
+    let j , valor
+    while (gap > 1) {
+        gap = gap / 3
+        for (let i = gap; i < array.length; i++) {
+            valor = array[i]
+            j = i - gap
+            while (j >= 0 && valor < array[j]) {
+                array[j + gap] = array[j];
+                j = j - gap;
+            }
+            array[j + gap] = valor;
         }
-
-        //if (vetor[k] > copia) {
-          //  vetor[i] = vetor[k]
-            //console.log(vetor);
-        //}
-        
-        console.log(vetor);
+        console.log(array);
     }
+    
 }
-shell()
